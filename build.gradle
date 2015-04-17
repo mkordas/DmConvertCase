@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'findbugs'
+
+repositories {
+    mavenCentral()
+}
+
+findbugs {
+    sourceSets = [ project.sourceSets.main ]
+    ignoreFailures = true
+    toolVersion = '3.0.1'
+}
+// exclude generated java sources - by explicitly setting the base source dir
+findbugsMain.source = 'src/main/java'
