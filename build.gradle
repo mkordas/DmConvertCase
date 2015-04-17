@@ -9,6 +9,7 @@ findbugs {
     sourceSets = [ project.sourceSets.main ]
     ignoreFailures = true
     toolVersion = '3.0.1'
+    reportLevel = 'low'
 }
 // exclude generated java sources - by explicitly setting the base source dir
 findbugsMain.source = 'src/main/java'
